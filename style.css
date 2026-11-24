@@ -1,0 +1,477 @@
+
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #17251f;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   ШАПКА САЙТА
+========================= */
+
+.header {
+    background: #17251f;
+    padding: 22px 0;
+    color: white;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #b9ed70;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #b9ed70;
+}
+
+.header-button {
+    background: #b9ed70;
+    color: #17251f;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   ГЛАВНЫЙ ЭКРАН
+========================= */
+
+.hero {
+    min-height: 600px;
+    background: linear-gradient(
+        135deg,
+        #17251f,
+        #31563f
+    );
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 100px 0;
+}
+
+.subtitle {
+    color: #b9ed70;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: #b9ed70;
+    display: block;
+}
+
+.hero p {
+    max-width: 580px;
+    color: #d5dfd7;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button,
+.button-outline {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button {
+    background: #b9ed70;
+    color: #17251f;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.button-outline {
+    border: 2px solid #b9ed70;
+    color: white;
+}
+
+.button-outline:hover {
+    background: #b9ed70;
+    color: #17251f;
+}
+
+/* =========================
+   О КОМПАНИИ
+========================= */
+
+.about {
+    padding: 100px 0;
+    background: #f7f9f6;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 15px 0 25px;
+}
+
+.about p {
+    max-width: 750px;
+    color: #66736b;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* =========================
+   УСЛУГИ
+========================= */
+
+.services {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.service-card {
+    padding: 35px 30px;
+    border-radius: 15px;
+    background: #f7f9f6;
+    border: 1px solid #e5ebe3;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(23, 37, 31, 0.1);
+    border-color: #b9ed70;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #244c37;
+}
+
+.service-card p {
+    color: #66736b;
+    font-size: 15px;
+}
+
+/* =========================
+   КОНТАКТЫ
+========================= */
+
+.contacts {
+    padding: 100px 0;
+    background: #244c37;
+    color: white;
+}
+
+.contacts h2 {
+    font-size: 42px;
+}
+
+.contacts > .container > p {
+    color: #d5dfd7;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    margin: 30px 0;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #d5dfd7;
+}
+
+.contact-info a {
+    color: #b9ed70;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   ПОДВАЛ
+========================= */
+
+.footer {
+    background: #17251f;
+    color: #bfcac2;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+/* =========================
+   АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ
+========================= */
+
+@media (max-width: 768px) {
+
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .services,
+    .contacts {
+        padding: 70px 0;
+    }
+
+}
+
+
+/* КНОПКА МОБИЛЬНОГО МЕНЮ */
+
+.mobile-menu-button {
+    display: none;
+    background: #b9ed70;
+    color: #17251f;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
+
+.hidden-animation {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.show-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ВСПЛЫВАЮЩАЯ ФОРМА */
+
+.popup-form {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.popup-content {
+    position: relative;
+    background: white;
+    color: #17251f;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 15px;
+    animation: popupAppear 0.3s ease;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.popup-content > p {
+    color: #66736b;
+    margin-bottom: 20px;
+}
+
+.popup-close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popup-content input,
+.popup-content textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.popup-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.popup-content .button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.form-message {
+    margin-top: 15px;
+    color: #315f36;
+    font-size: 14px;
+}
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ МЕНЮ */
+
+@media (max-width: 768px) {
+
+    .header .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+}
